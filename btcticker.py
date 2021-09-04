@@ -471,6 +471,7 @@ def main():
                     # configwrite(config)
                 lastcoinfetch=fullupdate(config,lastcoinfetch)
                 datapulled = True
+            time.sleep(0.1)
     except IOError as e:
         logging.error(e)
         image=beanaproblem(str(e)+" Line: "+str(e.__traceback__.tb_lineno))
